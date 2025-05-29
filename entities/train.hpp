@@ -1,12 +1,20 @@
 #include<iostream>
 #include<time.h>
+#include<vector>
+#include "../entities/user.hpp"
+
 using namespace std;
 
 
 struct Train {
-     string trainId;
-     string name;
-     string source;
-     string destination;
-     time_t time;
+    string  trainId;
+    string name;
+    string source;
+    string destination;
+    time_t time;
+    vector<vector<User>> seats;
+
 };
+
+
+

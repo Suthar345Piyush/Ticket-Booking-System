@@ -1,7 +1,7 @@
 #include<iostream>
 #include<time.h>
 #include<vector> 
-#include "train.hpp"
+#include "vehicle.hpp"
 
 using namespace std;
 
@@ -9,7 +9,7 @@ struct User {
    string userId;
    string name;
    string aadharCard;
-   vector<Train> train;
+   vector<Vehicle> vehicles;
 };
 
 
