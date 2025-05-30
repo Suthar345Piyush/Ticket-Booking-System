@@ -3,11 +3,6 @@
 #include "../entities/vehicle.hpp"
 #include<fstream>
 
-
-
-
-
-
 using namespace std;
 
 // json file decleration 
@@ -19,8 +14,7 @@ class FileIO {
    private:  
       const string filename = "db.json";
 
-
-
+      
   public:
     void saveToFile(T entity){
        json j;
