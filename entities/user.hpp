@@ -1,7 +1,8 @@
+#pragma once
+
 #include<iostream>
-#include<time.h>
+#include<string>
 #include<vector> 
-#include "vehicle.hpp"
 
 using namespace std;
 
@@ -9,7 +10,7 @@ struct User {
    string userId;
    string name;
    string aadharCard;
-   vector<Vehicle> vehicles;
+   vector<Vehicle*> vehicles;
 };
 
 

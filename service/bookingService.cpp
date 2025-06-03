@@ -5,29 +5,79 @@
 #include <fileIO.cpp>
 
 
+// template for vehicles
 
-
-template <typename T>
+template <>
 void BookingService<T>::book(string entityId , User user , string name , string source , string destination){
         
 
-         struct Vehicle vehicle;
+          Vehicle vehicle;
          vehicle.vehicleId = entityId;
          vehicle.name = name;
          vehicle.source = source;
          vehicle.destination = destination;
-         vehicle.time = time(NULL);
+         vehicle.time = time(nullptr);
          vehicle.seats = {{user}};
 
 
          saveBooking(vehicle);
 }
 
-template <typename T>
-void saveBooking(T entity){
-   FileIO file;
-   file.saveToFile(entity);
+template <>
+void BookingService<Vehicle>::cancelBooking(string entityId , string userId){
+    // for cancel booking 
 }
+
+
+template <>
+void BookingService<Vehicle>::printBooking(string entityId , string userId){
+   // for print booking 
+}
+
+
+template <>
+void BookingService<Vehicle>::saveBooking(Vehicle entity) {
+    FileIO<Vehicle> file;
+    file.saveToFile(entity);
+}
+
+
+// template specifically for train 
+
+
+template <>
+void BookingService<Train>::book(string entityId , User user , string name , string source , string destination){
+    Train train;
+    train.trainId = entityId;
+    train.name = name;
+    train.source = source;
+    train.destination = destination;
+    train.time = time(nullptr);
+    train.seats = {{user}};
+
+    saveBooking(train);
+}
+
+
+
+template <>
+void BookingService<Train>::cancelBooking(string entityId , string userId){
+    // for cancel train booking 
+}
+
+
+template <>
+void BookingService<Train>::printBooking(string entityId , string userId){
+   // for printing train tickets 
+}
+
+template <>
+void BookingService<Train>::saveBooking(Train entity){
+    FileIO<Train> file;
+    file.saveToFile(entity);
+}
+
+
 
 
 

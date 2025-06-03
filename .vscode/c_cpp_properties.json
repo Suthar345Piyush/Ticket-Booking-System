@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "windows-gcc-x86",
+            "includePath": [
+                "{",
+                "  \"configurations\": [",
+                "    {",
+                "      \"name\": \"Win32\",",
+                "      \"includePath\": [",
+                "        \"${workspaceFolder}/**\",",
+                "        \"C:/C++ Projects/Ticket Booking System/entities\",  // Add your header folders here",
+                "        \"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/.../include\", // Optional: VS paths",
+                "        \"C:/MinGW/include\" // Or your compiler's include path",
+                "      ],",
+                "      \"defines\": [],",
+                "      \"compilerPath\": \"C:/MinGW/bin/g++.exe\",",
+                "      \"cStandard\": \"c11\",",
+                "      \"cppStandard\": \"c++17\",",
+                "      \"intelliSenseMode\": \"windows-gcc-x64\"",
+                "    }",
+                "  ],",
+                "  \"version\": 4",
+                "}"
+            ]
+        }
+    ],
+    "version": 4
+}

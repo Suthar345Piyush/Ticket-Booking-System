@@ -3,16 +3,7 @@
 #include "entities/user.hpp"
 #include "service/bookingService.hpp"
 
-
-
-
-
-
-
 using namespace std;
-
-
-
 
 int main(){
    string userId;
@@ -29,7 +20,7 @@ int main(){
    cout << "Enter Aadhar Card Number: ";
    cin >> aadharCard;
 
-     vector<Vehicle> vehicles;
+    
 
      cout << "Enter the option: " << endl;
      cout << "Enter 1 to book thet train" << endl;
@@ -54,7 +45,12 @@ int main(){
           cin >> destination; 
 
 
-          User user = {userId , name , aadharCard , vehicles};
+          User user;
+          user.userId = userId;
+          user.name = name;
+          user.aadharCard = aadharCard;
+
+          
           BookingService<Vehicles> bookingService;
           bookingService.book(trainId , userId , trainName , source , destination);
 

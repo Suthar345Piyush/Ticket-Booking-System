@@ -1,3 +1,5 @@
+#pragma once
+
 #include<iostream>
 #include<time.h>
 #include<vector>
@@ -16,14 +18,19 @@ struct Vehicle {
 };
 
 
-Train convert(Vehicle vehicle){
-      struct Train train;
+
+inline Train convert(Vehicle vehicle){
+      Train train;
       train.trainId = vehicle.vehicleId;
       train.name = vehicle.name;
       train.source = vehicle.source;
       train.destination = vehicle.destination;
       train.time = vehicle.time;
-      train.seats = vehicle.seats;
+      train.seats.resize(vehicle.seats.size());
+
+      for(size_t i=0; i<vehicle.seats.size(); i++){
+             train.seats[i] = vehicle.seats[i];
+      }
 
 
       return train;
