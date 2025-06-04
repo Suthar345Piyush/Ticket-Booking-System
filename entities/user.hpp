@@ -6,6 +6,9 @@
 
 using namespace std;
 
+struct Vehicle;
+
+
 struct User {
    string userId;
    string name;
